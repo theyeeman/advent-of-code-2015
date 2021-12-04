@@ -1,11 +1,52 @@
 import time
 
 
-def main():
-    # inputs = standard_func.get_input_as_str('input.txt')
-    inputs = standard_func.get_input_as_str('test.txt')
+def contains_three_vowels(s):
+    vowel_count = 0
+    vowel_set = set(['a', 'e', 'i', 'o', 'u'])
+
+    for char in s:
+        if char in vowel_set:
+            vowel_count += 1
+
+    return True if vowel_count >= 3 else False
+
+
+def contains_twice_char(s):
+    for i in range(len(s) - 1):
+        if s[i] == s[i + 1]:
+            return True
     
-    # Code goes here
+    return False
+
+
+def is_naughty(s):
+    bad_strings = ['ab', 'cd', 'pq', 'xy']
+
+    for bad_string in bad_strings:
+        if bad_string in s:
+            return True
+
+    return False
+
+
+def is_nice(s):
+    return (contains_three_vowels(s)
+            and contains_twice_char(s)
+            and not is_naughty(s))
+
+
+def main():
+    inputs = standard_func.get_input_as_str('input.txt')
+    # inputs = standard_func.get_input_as_str('test.txt')
+    
+    nice_count = 0
+
+    for input in inputs:
+        if is_nice(input):
+            nice_count += 1
+
+    print(nice_count)
 
 
 # Boilerplate code below

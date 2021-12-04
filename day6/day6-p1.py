@@ -67,8 +67,6 @@ def main():
     
     for input in inputs:
         command, x1, y1, x2, y2 = parse_input_row(input)
-
-        # print(f'{command} {x1} {y1} {x2} {y2}')
         grid_action(grid, command, x1, y1, x2, y2)
 
     print(count_lights_on(grid))

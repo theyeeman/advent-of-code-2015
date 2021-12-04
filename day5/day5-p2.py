@@ -32,7 +32,6 @@ def main():
 
     for input in inputs:
         if is_nice(input):
-            print(input)
             nice_count += 1
 
     print(nice_count)

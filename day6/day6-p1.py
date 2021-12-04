@@ -71,8 +71,6 @@ def main():
 
     print(count_lights_on(grid))
 
-    
-    
 
 # Boilerplate code below
 class standard_func:

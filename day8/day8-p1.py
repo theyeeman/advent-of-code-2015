@@ -24,6 +24,7 @@ def main():
 
     print(f'raw_length: {raw_length}')
     create_py_file(inputs)
+    # Run the generated file "day8-generated-p1.py" to get representational length
 
 
 # Boilerplate code below

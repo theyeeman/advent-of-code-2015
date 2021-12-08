@@ -8,8 +8,6 @@ def main():
     iterations = 40
 
     for _ in range(iterations):
-        # print('iteration', _)
-        # print('s', s)
         char_repetition_count = 0
         next_s = ''
         curr_char = s[0]
